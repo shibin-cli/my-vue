@@ -8,5 +8,3 @@
 @vue/runtime-dom
 @vue/runtime-reactivity
 ```
-
-

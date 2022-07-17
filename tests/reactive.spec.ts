@@ -1,9 +1,12 @@
 import reactive from '../src/reactive'
+
 describe('reactive', () => {
-    it('define reactive', () => {
-        const data = {foo: 1}
-        const proxyData = reactive(data)
-        expect(proxyData).not.toBe(data)
-        expect(proxyData.foo).toBe(data.foo)
+    it('happy path', () => {
+        const origin = {
+            foo: 1
+        }
+        const observed = reactive(origin)
+        expect(observed).not.toBe(origin)
+        expect(observed.foo).toBe(origin.foo)
     })
 })
